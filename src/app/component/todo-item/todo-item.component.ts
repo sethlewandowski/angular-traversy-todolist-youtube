@@ -12,4 +12,21 @@ export class TodoItemComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  // set dynamic classes
+  setClasses() {
+    let classes = {
+      todo: true,
+      'is-complete': this.todo.completed,
+    };
+    return classes;
+  }
+
+  onToggle(todo: object) {
+    //todo.completed = !todo.completed;
+    console.log('toggle');
+  }
+  onDelete(todo: object) {
+    console.log('delete');
+  }
 }
